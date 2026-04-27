@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact | Zync Technologies</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-laptop-medical"></i>
+                </div>
+                <div class="inner-nav">
+                    <div class="row">
+                        <p class="big">Zync Technologies</p>
+                        <p class="big hidden-mobile">+1 469-238-6152</p>
+                    </div>
+                    <div class="row">
+                        <p class="blue hidden-mobile">
+                            AI | Data Science | Cloud | DevOps | Cybersecurity
+                        </p>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html" class="active">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <header></header>
+
+        <!-- Contact Us Form (from testoftest.html) -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Contact Us</h2>
+                    <p>Contact For Any Query</p>
+
+                    <form>
+                        <p>
+                            <label for="name">Your Name</label><br />
+                            <input type="text" id="name" placeholder="Your Name" />
+                        </p>
+                        <p>
+                            <label for="email">Your Email</label><br />
+                            <input type="email" id="email" placeholder="Your Email" />
+                        </p>
+                        <p>
+                            <label for="subject">Subject</label><br />
+                            <input type="text" id="subject" placeholder="Subject" />
+                        </p>
+                        <p>
+                            <label for="message">Message</label><br />
+                            <textarea
+                                id="message"
+                                placeholder="Leave a message here"
+                                style="height: 150px; width: 100%;"
+                            ></textarea>
+                        </p>
+                        <p>
+                            <button type="submit">Send Message</button>
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Our Location (from testoftest.html) -->
+                <div class="col">
+                    <h2>Our Location</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13372.95705006685!2d-96.75939878961559!3d33.076489440927865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c180283973141%3A0x34c87feb89d0c576!2s2320%20Dampton%20Dr%2C%20Plano%2C%20TX%2075025!5e0!3m2!1sen!2sus!4v1777210862997!5m2!1sen!2sus"
+                        width="100%"
+                        height="400"
+                        style="border: 0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+
+                <div class="col">
+                    <h2>Contact Details</h2>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i><br />
+                        Head Office:<br />Plano, TX, USA, 7s5025
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt"></i><br />
+                        +1-469-238-6152
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope"></i><br />
+                        info@zynctechnologies.com
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter (from testoftest.html) -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Newsletter</h2>
+                    <p>
+                        At Zync Technologies LLC, we hire detail-oriented people
+                        who strive to provide our clients with the best assistance on the planet.
+                    </p>
+                    <p>
+                        <input
+                            id="newsletter-email"
+                            type="email"
+                            placeholder="Your Email"
+                            style="padding: 10px; width: 70%;"
+                        />
+                        <button id="newsletter-btn" type="button">Send</button>
+                    </p>
+                    <p id="newsletter-success" style="display: none; color: green;">
+                        Sent successfully!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="index.html"><button>Back to Home</button></a>
+        </div>
+
+        <script>
+            document.getElementById("newsletter-btn").addEventListener("click", function () {
+                var emailInput = document.getElementById("newsletter-email");
+                var successMsg = document.getElementById("newsletter-success");
+                var email = emailInput.value.trim();
+                var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (re.test(email)) {
+                    successMsg.style.display = "block";
+                    emailInput.value = "";
+                    setTimeout(function () {
+                        successMsg.style.display = "none";
+                    }, 2500);
+                } else {
+                    alert("Please enter a valid email address.");
+                }
+            });
+        </script>
+    </body>
+</html>
