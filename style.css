@@ -23,6 +23,26 @@ header {
     margin-bottom: 2rem;
 }
 
+.hero-slider {
+    position: relative;
+    height: 300px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.hero-slider .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.hero-slider .slide.active {
+    opacity: 1;
+}
+
 nav {
     display: flex;
     font-weight: bold;
