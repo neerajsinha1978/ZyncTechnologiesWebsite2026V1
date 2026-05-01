@@ -47,42 +47,12 @@
                     <p>Contact For Any Query</p>
 
                     <form action="https://api.web3forms.com/submit" method="POST">
-                        <!-- Replace with your real key from Web3Forms dashboard -->
-                        <input type="hidden" name="access_key" value="PASTE_YOUR_REAL_ACCESS_KEY" />
-                    
-                        <!-- Keep static subject separate from user-entered subject -->
-                        <input type="hidden" name="subject" value="New Contact Form Submission - Zync Technologies" />
-                        <input type="hidden" name="from_name" value="Zync Website Contact Form" />
-                    
-                        <!-- Use your real domain (or remove this line temporarily) -->
-                        <input type="hidden" name="redirect" value="https://zynctechnologies.com/contact.html?sent=1" />
-                    
-                        <p>
-                            <label for="name">Your Name</label><br />
-                            <input type="text" id="name" name="name" placeholder="Your Name" required />
-                        </p>
-                        <p>
-                            <label for="email">Your Email</label><br />
-                            <input type="email" id="email" name="email" placeholder="Your Email" required />
-                        </p>
-                        <p>
-                            <label for="user_subject">Subject</label><br />
-                            <input type="text" id="user_subject" name="user_subject" placeholder="Subject" required />
-                        </p>
-                        <p>
-                            <label for="message">Message</label><br />
-                            <textarea
-                                id="message"
-                                name="message"
-                                placeholder="Leave a message here"
-                                style="height: 150px; width: 100%;"
-                                required
-                            ></textarea>
-                        </p>
-                        <p>
-                            <button type="submit">Send Message</button>
-                        </p>
-                    </form>
+                        <input type="hidden" name="access_key" value="3b9598db-53d9-45e6-9a38-aff64bc5527a">
+                        <input type="text" name="name" required>
+                        <input type="email" name="email" required>
+                        <textarea name="message" required></textarea>
+                        <button type="submit">Send Message</button>
+                      </form>
                 </div>
 
                 <!-- Our Location (from testoftest.html) -->
