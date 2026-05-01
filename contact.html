@@ -47,10 +47,15 @@
                     <p>Contact For Any Query</p>
 
                     <form action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+                        <!-- Replace with your real key from Web3Forms dashboard -->
+                        <input type="hidden" name="access_key" value="PASTE_YOUR_REAL_ACCESS_KEY" />
+                    
+                        <!-- Keep static subject separate from user-entered subject -->
                         <input type="hidden" name="subject" value="New Contact Form Submission - Zync Technologies" />
                         <input type="hidden" name="from_name" value="Zync Website Contact Form" />
-                        <input type="hidden" name="redirect" value="https://yourdomain.com/contact.html?sent=1" />
+                    
+                        <!-- Use your real domain (or remove this line temporarily) -->
+                        <input type="hidden" name="redirect" value="https://zynctechnologies.com/contact.html?sent=1" />
                     
                         <p>
                             <label for="name">Your Name</label><br />
@@ -61,8 +66,8 @@
                             <input type="email" id="email" name="email" placeholder="Your Email" required />
                         </p>
                         <p>
-                            <label for="subject">Subject</label><br />
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required />
+                            <label for="user_subject">Subject</label><br />
+                            <input type="text" id="user_subject" name="user_subject" placeholder="Subject" required />
                         </p>
                         <p>
                             <label for="message">Message</label><br />
