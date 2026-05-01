@@ -46,25 +46,32 @@
                     <h2>Contact Us</h2>
                     <p>Contact For Any Query</p>
 
-                    <form>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+                        <input type="hidden" name="subject" value="New Contact Form Submission - Zync Technologies" />
+                        <input type="hidden" name="from_name" value="Zync Website Contact Form" />
+                        <input type="hidden" name="redirect" value="https://yourdomain.com/contact.html?sent=1" />
+                    
                         <p>
                             <label for="name">Your Name</label><br />
-                            <input type="text" id="name" placeholder="Your Name" />
+                            <input type="text" id="name" name="name" placeholder="Your Name" required />
                         </p>
                         <p>
                             <label for="email">Your Email</label><br />
-                            <input type="email" id="email" placeholder="Your Email" />
+                            <input type="email" id="email" name="email" placeholder="Your Email" required />
                         </p>
                         <p>
                             <label for="subject">Subject</label><br />
-                            <input type="text" id="subject" placeholder="Subject" />
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required />
                         </p>
                         <p>
                             <label for="message">Message</label><br />
                             <textarea
                                 id="message"
+                                name="message"
                                 placeholder="Leave a message here"
                                 style="height: 150px; width: 100%;"
+                                required
                             ></textarea>
                         </p>
                         <p>
@@ -99,7 +106,7 @@
                     </p>
                     <p>
                         <i class="fas fa-envelope"></i><br />
-                        info@zynctechnologies.com
+                        c
                     </p>
                 </div>
             </div>
